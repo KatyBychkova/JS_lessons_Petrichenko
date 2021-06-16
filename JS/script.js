@@ -1,48 +1,36 @@
 'use strict';
 
-let num = 20;
+const str = "teSt";
+const arr = [1, 2, 3];
 
-  function showFirstMessage(text) {
-      console.log(text);
-      let num = 10;
-      console.log(num);
-  }
-  showFirstMessage("Hello world!");  
-  console.log(num);
+console.log(str.length); /*.length - это свойство, узнается через точку, не скобками*/
+console.log(arr.length);
 
+// console.log(str[2]);
+// console.log(str[2] = 'd'); /* это работать не будет, в слове букву не заменит, тк напрямую это не работает. строка это уельная строка*/
+// console.log(str);
 
-  function calc(a, b) {
-      return (a + b);
-  }
-  console.log(calc(4, 3));
-  console.log(calc(5, 7));
-  console.log(calc(104, 6));
+console.log(str.toUpperCase()); /* str.toUpperCase() -  напрямую не изменяет ту строку, возвращает новое значение, кот можно использовать где-то либо записать в другую переменную */
+console.log(str.toLowerCase());
+console.log(str); 
 
+const fruit = "Apple is a fruit";
+console.log(fruit.indexOf("fruit"));
+console.log(fruit.indexOf("q"));
 
-  function ret() {
-      let num = 50;
+const logg = "Hello world";
+console.log(logg.slice(6, 11)); /* вырежет и выведет в консоль эелементы с 6 до 11*/
+console.log(logg.slice(6));  /* вырежет и выведет в консоль эелементы с 6 до конца строки*/
+console.log(logg.slice(-5, -1));
 
-      //
+console.log(logg.substring(6, 11)); /*не поддерживае отрицательные аргументы*/
 
-
-      return num; /*возвращает num во внешний мир*/
-  }
-  const anotherNum = ret();
-  console.log(anotherNum);
+console.log(logg.substr(6, 5)); /*начало и кол-во символов*/
 
 
-  const logger = function() {
-      console.log("Hello");
-  };
-  logger();
+const num = 12.2;
+console.log(Math.round(num)); /*округляет число до целлого*/
 
-
-  const calc = (a, b) => { return a + b };
-  const calc = (a, b) =>  a + b ;
-
-  const calc = (a, b) => { 
-     console.log('1');
-    return a + b;
-  };
-
-
+const test = "12.2px";
+console.log(parseInt(test)); /*округляет число до целлого и переводит в число*/
+console.log(parseFloat(test)); /*не округляет число до целлого и переводит в число*/
